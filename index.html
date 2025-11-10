@@ -1,1 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mohammad Kashif — Frontend Developer</title>
 
+<!-- SEO + Social Meta -->
+<meta name="description" content="Mohammad Kashif — Frontend Developer skilled in HTML, CSS, JS, and PHP. Portfolio showcasing projects and contact info.">
+<meta property="og:title" content="Mohammad Kashif — Frontend Developer">
+<meta property="og:description" content="Explore my portfolio, skills, and projects. Available for freelance and collaborations.">
+<meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/2965/2965358.png">
+<meta name="theme-color" content="#0f1724">
+
+<!-- Fonts & Favicon -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2965/2965358.png" type="image/png">
+
+<style>
+:root {
+  --bg1: #0f1724;
+  --bg2: #0b1220;
+  --accent1: #6ee7b7;
+  --accent2: #7c3aed;
+  --muted: rgba(255,255,255,0.65);
+  --card: rgba(255,255,255,0.05);
+  --radius: 14px;
+  --ff: 'Inter', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--ff);
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: #e6eef8;
+  padding: 40px 24px;
+}
+.wrap { max-width: 1100px; margin: auto; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;}
+.logo { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg,var(--accent2),var(--accent1)); display: grid; place-items: center; font-weight: 700; color: #06121a; }
+.btn, .primary { text-decoration: none; border-radius: 12px; padding: 8px 14px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition:.2s;}
+.btn { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--muted); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(124,58,237,0.2); color: white; }
+.primary { background: linear-gradient(90deg,var(--accent1),var(--accent2)); color: #06121a; border:none; }
+.primary:hover { transform: translateY(-3px); box-shadow: 0 0 18px rgba(108,99,255,0.4); }
+
+nav { text-align: center; margin-bottom: 25px; }
+nav a { margin: 0 6px; }
+
+.card { background: var(--card); padding: 20px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(2,6,23,0.6); margin-top:20px; opacity:0; transform:translateY(30px); transition:0.6s ease; }
+.show { opacity:1; transform:translateY(0); }
+
+.skill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.05); font-size: 13px; margin: 4px; }
+.projects-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); margin-top:15px;}
+.project-card { background: rgba(255,255,255,0.04); padding:18px;border-radius:12px;transition:.3s;}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,0,0,0.4);}
+.project-card h4{margin:0 0 6px 0;}
+.project-card p{color:var(--muted);font-size:14px;margin-bottom:10px;}
+footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 13px; animation: fadeIn 2s ease; }
+.gradient-text { background: linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip: text; color: transparent; }
+.socials {display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:14px;}
+.socials a {width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#fff;transition:0.3s;box-shadow:0 0 10px rgba(0,0,0,0.3);}
+.socials a img{width:28px;height:28px;}
+.socials a:hover{transform:scale(1.1);}
+@keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+@media (max-width:600px){
+  body { padding: 24px 14px; }
+  header { flex-direction: column; gap: 12px; }
+  .socials a { width:44px; height:44px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo">MK</div>
+      <div class="name">
+        <h1>Mohammad Kashif</h1>
+        <p>MCA • Front End Developer</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about" class="btn">About</a>
+    <a href="#skills" class="btn">Skills</a>
+    <a href="#projects" class="btn">Projects</a>
+    <a href="#contact" class="btn">Contact</a>
+  </nav>
+
+  <section class="card">
+    <h2>Hello — I'm <span class="gradient-text">Mohammad Kashif</span></h2>
+    <p>Front End Developer skilled in HTML, CSS, JavaScript, PHP, and C. I create responsive and modern websites with clean UI & UX.</p>
+    <div style="margin-top:12px;">📍 Srinagar — Available for freelance & college projects.</div>
+    <p style="margin-top:10px;font-style:italic;color:var(--muted);">"Code is like art — every line tells a story."</p>
+  </section>
+
+  <section id="about" class="card">
+    <h3>About Me</h3>
+    <p>I’m Mohammad Kashif, an MCA student and passionate Front-End Developer. I love turning ideas into interactive and user-friendly web interfaces using HTML, CSS, JavaScript, and PHP. I’m currently open for freelance opportunities and collaborations.</p>
+  </section>
+
+  <section id="skills" class="card">
+    <h3>Skills</h3>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">PHP</div>
+      <div class="skill">C</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Version Control (Git)</div>
+    </div>
+  </section>
+
+  <section id="projects" class="card">
+    <h3>My Projects</h3>
+    <p>Here are some of my recent works. You can explore live demos and source code:</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>1️⃣ Login & Registration System</h4>
+        <p>Responsive PHP-based login/signup page using HTML, CSS, and JS — no database, only global variables.</p>
+        <a class="primary" href="#" target="_blank">View Live</a>
+        <a class="btn" href="#" target="_blank">Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <h4>2️⃣ Portfolio Website</h4>
+        <p>This same personal portfolio hosted on GitHub Pages — built fully responsive in one HTML file.</p>
+        <a class="primary" href="https://hitech-dot.github.io/Portfolio/" target="_blank">View Live</a>
+        <a class="btn" href="https://github.com/hitech-dot/Portfolio" target="_blank">Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <h4>3️⃣ Student Result Calculator</h4>
+        <p>Mini C language project to calculate percentage, grade, and performance report of students.</p>
+        <a class="primary" href="#" target="_blank">View Demo</a>
+        <a class="btn" href="#" target="_blank">Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <h4>4️⃣ Responsive Gallery Page</h4>
+        <p>Created using HTML, CSS, and JS grid layout — optimized for college projects.</p>
+        <a class="primary" href="#" target="_blank">View Live</a>
+        <a class="btn" href="#" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="card">
+    <h3>Contact & Social Links</h3>
+    <a class="primary" href="resume.pdf" download style="display:inline-flex;align-items:center;gap:8px;margin-bottom:15px;">📄 Download Resume</a>
+    <p>Get in touch with me through:</p>
+    <div class="socials">
+      <a href="mailto:darkashif23@gmail.com" title="Gmail"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail"></a>
+      <a href="https://wa.me/916005747210" target="_blank" title="WhatsApp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      <a href="https://instagram.com/mhar1s_92" target="_blank" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+      <a href="https://github.com/hitech-dot" target="_blank" title="GitHub"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"></a>
+      <a href="https://linkedin.com/in/mohammad-kashif" target="_blank" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+    </div>
+  </section>
+
+  <footer>
+    Built by <strong>Mohammad Kashif</strong> • Front End Developer • © <span id="year"></span>
+  </footer>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
+});
+cards.forEach(card => observer.observe(card));
+</script>
+</body>
+  </html>
