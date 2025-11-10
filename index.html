@@ -5,14 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mohammad Kashif — Frontend Developer</title>
 
-<!-- SEO + Social Meta -->
 <meta name="description" content="Mohammad Kashif — Frontend Developer skilled in HTML, CSS, JS, and PHP. Portfolio showcasing projects and contact info.">
-<meta property="og:title" content="Mohammad Kashif — Frontend Developer">
-<meta property="og:description" content="Explore my portfolio, skills, and projects. Available for freelance and collaborations.">
-<meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/2965/2965358.png">
-<meta name="theme-color" content="#0f1724">
-
-<!-- Fonts & Favicon -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2965/2965358.png" type="image/png">
 
@@ -33,10 +26,11 @@ body {
   font-family: var(--ff);
   background: linear-gradient(180deg, var(--bg1), var(--bg2));
   color: #e6eef8;
-  padding: 40px 24px;
+  padding: 0;
 }
-.wrap { max-width: 1100px; margin: auto; }
-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 10px;}
+.wrap { max-width: 1100px; margin: auto; padding: 40px 24px; }
+
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
 .logo { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg,var(--accent2),var(--accent1)); display: grid; place-items: center; font-weight: 700; color: #06121a; }
 .btn, .primary { text-decoration: none; border-radius: 12px; padding: 8px 14px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition:.2s;}
 .btn { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--muted); }
@@ -44,12 +38,37 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .primary { background: linear-gradient(90deg,var(--accent1),var(--accent2)); color: #06121a; border:none; }
 .primary:hover { transform: translateY(-3px); box-shadow: 0 0 18px rgba(108,99,255,0.4); }
 
-nav { text-align: center; margin-bottom: 25px; }
-nav a { margin: 0 6px; }
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+.hero img {
+  width: 48%;
+  min-width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+.hero-text {
+  flex: 1;
+  padding: 30px;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  color: var(--muted);
+  line-height: 1.6;
+}
 
-.card { background: var(--card); padding: 20px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(2,6,23,0.6); margin-top:20px; opacity:0; transform:translateY(30px); transition:0.6s ease; }
-.show { opacity:1; transform:translateY(0); }
-
+.card { background: var(--card); padding: 20px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(2,6,23,0.6); margin-top:20px;}
 .skill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.05); font-size: 13px; margin: 4px; }
 .projects-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); margin-top:15px;}
 .project-card { background: rgba(255,255,255,0.04); padding:18px;border-radius:12px;transition:.3s;}
@@ -63,14 +82,15 @@ footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 1
 .socials a img{width:28px;height:28px;}
 .socials a:hover{transform:scale(1.1);}
 @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
-@media (max-width:600px){
-  body { padding: 24px 14px; }
-  header { flex-direction: column; gap: 12px; }
-  .socials a { width:44px; height:44px; }
+@media (max-width:768px){
+  .hero {flex-direction: column;}
+  .hero img {width: 100%;}
+  .hero-text {padding: 20px;}
 }
 </style>
 </head>
 <body>
+
 <div class="wrap">
   <header>
     <div class="brand">
@@ -82,23 +102,19 @@ footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 1
     </div>
   </header>
 
-  <nav>
-    <a href="#about" class="btn">About</a>
-    <a href="#skills" class="btn">Skills</a>
-    <a href="#projects" class="btn">Projects</a>
-    <a href="#contact" class="btn">Contact</a>
-  </nav>
-
-  <section class="card">
-    <h2>Hello — I'm <span class="gradient-text">Mohammad Kashif</span></h2>
-    <p>Front End Developer skilled in HTML, CSS, JavaScript, PHP, and C. I create responsive and modern websites with clean UI & UX.</p>
-    <div style="margin-top:12px;">📍 Srinagar — Available for freelance & college projects.</div>
-    <p style="margin-top:10px;font-style:italic;color:var(--muted);">"Code is like art — every line tells a story."</p>
-  </section>
-
-  <section id="about" class="card">
-    <h3>About Me</h3>
-    <p>I’m Mohammad Kashif, an MCA student and passionate Front-End Developer. I love turning ideas into interactive and user-friendly web interfaces using HTML, CSS, JavaScript, and PHP. I’m currently open for freelance opportunities and collaborations.</p>
+  <!-- Hero Section with Photo and Intro -->
+  <section class="hero">
+    <img src="myphoto.jpg" alt="Mohammad Kashif">
+    <div class="hero-text">
+      <h1>Hello — I'm <span class="gradient-text">Mohammad Kashif</span></h1>
+      <p>Front End Developer skilled in HTML, CSS, JavaScript, PHP, and C. I create responsive and modern websites with clean UI & UX.</p>
+      <div style="margin-top:12px;">📍 Srinagar — Available for freelance & college projects.</div>
+      <p style="margin-top:10px;font-style:italic;color:var(--muted);">"Code is like art — every line tells a story."</p>
+      <div style="margin-top:18px;">
+        <a class="primary" href="#projects">View Projects</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
   </section>
 
   <section id="skills" class="card">
@@ -116,8 +132,6 @@ footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 1
 
   <section id="projects" class="card">
     <h3>My Projects</h3>
-    <p>Here are some of my recent works. You can explore live demos and source code:</p>
-
     <div class="projects-grid">
       <div class="project-card">
         <h4>1️⃣ Login & Registration System</h4>
@@ -139,19 +153,12 @@ footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 1
         <a class="primary" href="#" target="_blank">View Demo</a>
         <a class="btn" href="#" target="_blank">Source Code</a>
       </div>
-
-      <div class="project-card">
-        <h4>4️⃣ Responsive Gallery Page</h4>
-        <p>Created using HTML, CSS, and JS grid layout — optimized for college projects.</p>
-        <a class="primary" href="#" target="_blank">View Live</a>
-        <a class="btn" href="#" target="_blank">Source Code</a>
-      </div>
     </div>
   </section>
 
   <section id="contact" class="card">
     <h3>Contact & Social Links</h3>
-    <a class="primary" href="resume.pdf" download style="display:inline-flex;align-items:center;gap:8px;margin-bottom:15px;">📄 Download Resume</a>
+    <a class="primary" href="resume.pdf" download>📄 Download Resume</a>
     <p>Get in touch with me through:</p>
     <div class="socials">
       <a href="mailto:darkashif23@gmail.com" title="Gmail"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail"></a>
@@ -169,13 +176,7 @@ footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 1
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) entry.target.classList.add('show');
-  });
-});
-cards.forEach(card => observer.observe(card));
 </script>
+
 </body>
-  </html>
+    </html>
